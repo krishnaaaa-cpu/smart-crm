@@ -8,7 +8,7 @@ nav{
     background-color: rgb(139, 69, 19);
     padding: 15px 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     
 }
@@ -30,4 +30,29 @@ nav ul li a{
     text-decoration: none;
     
 }
+
+
+nav img{
+   height: 50px;
+   width: 100px;
+}
+
+.nav-links a {
+    display:flex;
+    gap:50px;
+    list-style-type: none;
+    margin-left:350px;
+    
+}
+
+.nav-links li{
+    margin:0;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:80px;
+}
+    
 

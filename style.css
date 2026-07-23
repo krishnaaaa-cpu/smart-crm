@@ -1,15 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+}
+
 body{
-    background-color: rgb(234, 207, 167);
+    background-color: #0F172A;
     margin: 0;
     padding: 0;
+    
 }
 
 nav{
-    background-color: rgb(139, 69, 19);
-    padding: 15px 30px;
+    background-color: #F8FAFC;
+    padding: 0px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height:64px;
     
 }
 
@@ -21,38 +28,48 @@ nav ul{
 
 nav ul li{
     display: inline-block;
-    margin-right: 200px;
-    
+    margin-right: 290px;
 }
 
 nav ul li a{
-    color: white;
+    color: #1E293B;
     text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
     
 }
 
 
 nav img{
-   height: 50px;
-   width: 100px;
+   height: 90px;
+   width: auto;
+   margin-left: 20px;
 }
 
 .nav-links a {
     display:flex;
-    gap:50px;
+    gap:40px;
     list-style-type: none;
-    margin-left:350px;
+    margin-left:40px;
+    
     
 }
 
-.nav-links li{
-    margin:0;
-}
 
 .left{
     display:flex;
     align-items:center;
-    gap:80px;
+   
+}
+
+.login-button {
+    background-color: #F59E0B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
 }
     
 

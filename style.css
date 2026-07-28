@@ -5,18 +5,17 @@
 
 body{
     background-color: #0F172A;
-    margin: 0;
-    padding: 0;
+   
     
 }
 
 nav{
     background-color: #F8FAFC;
-    padding: 0px 30px;
+    padding: 8px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height:64px;
+    min-height:64px;
     
 }
 
@@ -27,8 +26,8 @@ nav ul{
 }
 
 nav ul li{
-    display: inline-block;
-    margin-right: 290px;
+    
+   margin:0;
 }
 
 nav ul li a{
@@ -41,24 +40,27 @@ nav ul li a{
 
 
 nav img{
-   height: 90px;
+   height:60px;
    width: auto;
    margin-left: 20px;
 }
 
-.nav-links a {
+.nav-links{
     display:flex;
     gap:40px;
-    list-style-type: none;
-    margin-left:40px;
-    
-    
+    list-style:none;
+    gap: 35px;
+}
+
+.nav-links a{
+    text-decoration:none;
 }
 
 
 .left{
     display:flex;
     align-items:center;
+    gap:50px;
    
 }
 
@@ -73,3 +75,50 @@ nav img{
 }
     
 
+.nav-links a:hover{
+    color:#F59E0B;
+    transition:0.3s;
+}
+
+.login-button{
+    transition:.3s;
+}
+
+.login-button:hover{
+    transform:translateY(-2px);
+}
+
+.logo{
+    height:60px;
+    width:auto;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .left {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo {
+        height: 45px;
+        margin-left: 0;
+    }
+
+    .login-button {
+        margin-top: 20px;
+    }
+}

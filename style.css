@@ -93,6 +93,28 @@ nav img{
     width:auto;
 }
 
+.hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:calc(100vh - 64px);
+    color:#F8FAFC;
+    text-align:left;
+   
+}
+
+.hero-content h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p{
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
 @media (max-width: 768px) {
 
     nav {

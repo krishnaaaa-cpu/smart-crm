@@ -1,23 +1,25 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 
 body{
     background-color: #0F172A;
-   
-    
+    overflow-x: hidden;
+    width: 100%;
 }
 
 nav{
     background-color: #F8FAFC;
-    padding: 8px 30px;
+    padding: 8px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height:64px;
-    height: 80px;
-    
+    height: auto;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 nav ul{
@@ -27,8 +29,7 @@ nav ul{
 }
 
 nav ul li{
-    
-   margin:0;
+    margin:0;
 }
 
 nav ul li a{
@@ -36,14 +37,12 @@ nav ul li a{
     text-decoration: none;
     font-size: 17px;
     font-weight: 600;
-    
 }
 
-
 nav img{
-   height:60px;
-   width: auto;
-   margin-left: 20px;
+    height:60px;
+    width: auto;
+    margin-left: 20px;
 }
 
 .nav-links{
@@ -57,12 +56,11 @@ nav img{
     text-decoration:none;
 }
 
-
 .left{
     display:flex;
     align-items:center;
-    gap:50px;
-   
+    gap:40px;
+    flex-wrap: wrap;
 }
 
 .login-button {
@@ -74,7 +72,6 @@ nav img{
     font-size: 16px;
     border-radius: 5px;
 }
-    
 
 .nav-links a:hover{
     color:#F59E0B;
@@ -90,22 +87,21 @@ nav img{
 }
 
 .logo{
-    height:150px;
+    height:60px;
     width:auto;
+    max-width:140px;
 }
-
 
 .hero{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding: 0 30px;
-    min-height: calc(100vh - 64px);  /* Adjust the height to account for the navbar up and down */
+    padding: 0 20px;
+    min-height: calc(100vh - 64px);
     color: #F8FAFC;
+    width: 100%;
+    flex-wrap: wrap;
 }
-
-
-
 
 .hero-left{
     display:flex;
@@ -113,8 +109,9 @@ nav img{
     justify-content:center;
     align-items:flex-start;
     gap:20px;
-    padding: 0 30px;
-    
+    padding: 0 20px;
+    flex: 1;
+    min-width: 280px;
 }
 
 .get-started-button {
@@ -148,7 +145,7 @@ nav img{
 }
 
 .hero-buttons{
-    display:flex;                        /*when in single div rows*/
+    display:flex;
     gap:20px;
     margin-top:20px;
 }
@@ -159,27 +156,30 @@ nav img{
     max-width: 600px;
     margin-top: 20px;
 }
- .hero-right{
+
+.hero-right{
     display:flex;
     justify-content:center;
     align-items:center;
-    padding: 0 30px;}
+    padding: 0 20px;
+    flex: 1;
+    min-width: 280px;
+}
 
 .dashboard-preview-card{
     background-color: #1E293B;
     color: #F8FAFC;
-    padding: 40px;
+    padding: 24px;
     border-radius: 15px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.3);
     width: 100%;
-    max-width: 400px;
+    max-width: 520px;
     text-align: left;
-    height: 320px;
-    width: 600px;
-    font-size:24px;
-    font-weight:bold;
+    height: auto;
+    font-size: 18px;
+    font-weight: 600;
     margin-bottom:20px;
-    
+    box-sizing: border-box;
 }
 
 .highlight{
@@ -189,8 +189,9 @@ nav img{
 .hero {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 24px;
+    flex-wrap: wrap;
     padding: 0 20px;
 }
 
@@ -223,32 +224,157 @@ nav img{
     margin-bottom: 20px;
 }
 
+@media (max-width: 1024px) {
+    .hero-left h1 { font-size: 40px; }
+    .dashboard-preview-card { max-width: 480px; }
+}
+
 @media (max-width: 768px) {
 
     nav {
         flex-direction: column;
         align-items: center;
-        padding: 15px;
+        padding: 12px 16px;
+        gap: 12px;
     }
 
     .left {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 16px;
+        width: 100%;
     }
 
     .nav-links {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 12px;
     }
 
     .logo {
         height: 45px;
         margin-left: 0;
+        margin-right: 0;
     }
 
     .login-button {
+        margin-top: 8px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 16px;
+        gap: 20px;
+    }
+
+    .hero-left {
+        align-items: center;
+        padding: 0;
+        flex: 1;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .hero-left h1 {
+        font-size: 28px;
+        word-break: break-word;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .hero-right {
+        width: 100%;
+        padding: 0;
         margin-top: 20px;
+        flex: 1;
+        min-width: auto;
+    }
+
+    .dashboard-preview-card {
+        max-width: 90%;
+        width: 100%;
+        padding: 20px;
+        height: auto;
+    }
+
+    .get-started-button, .learn-more-button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav {
+        padding: 12px 12px;
+        gap: 10px;
+    }
+
+    .left {
+        gap: 12px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .hero {
+        padding: 16px 12px;
+        gap: 16px;
+        min-height: auto;
+    }
+
+    .hero-left {
+        padding: 0;
+        min-width: auto;
+    }
+
+    .hero-left h1 {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .get-started-button, .learn-more-button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .dashboard-preview-card {
+        max-width: 100%;
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    .stat {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
     }
 }
